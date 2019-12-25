@@ -9,8 +9,3 @@
 - commit
 - push
 
-
-
-图示：
-
-![](F:\dk\Git\git.png)
