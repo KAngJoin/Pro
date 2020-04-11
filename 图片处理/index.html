@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片问题</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="box compress">
+        <h3>图片压缩</h3>
+        <input type="file" id="file"> <br>
+        <div class="content">
+            <div class="left">
+                <p>原始的 <span class="size origin-size"></span></p>
+                <img id="origin" src="" alt="origin"> <br>
+            </div>
+            <div class="right">
+                <p>处理过 <span class="size compress-size"></span></p>
+                <img src="" alt="compress" class="new">
+            </div>
+        </div>
+    </div>
+    <div class="box rotate">
+        <h3>图片旋转</h3>
+        <input type="file" name="" id="rotate-choose">
+        <div class="content">
+            <div class="left">
+                <p>正常图片</p>
+                <img class="max normal-img" src="" alt="normal">
+            </div>
+            <div class="right">
+                <p>旋转图片</p>
+                <img class="max rotate-img" src="" alt="rotate">
+            </div>
+        </div>
+    </div>
+    <div class="box classify">
+        <h3>图片显示分类</h3>
+        <div class="content">
+            <div class="one">
+                <p class="classify-title">1.截取展示</p>
+                <p>Normal</p>
+                <img class="classify-img" src="./yy.jpg" alt="">
+                <p>Dispose</p>
+                <div class="cut">
+                    <img src="./yy.jpg" style="width: 100%" alt="">
+                </div>
+            </div>
+            <div class="two">
+                <p class="classify-title">2.展示中间（可预览）</p>
+                <p>Normal</p>
+                <img class="classify-img" src="./yy.jpg" alt="">
+                <p>Dispose</p>
+                <div class="show-center">
+                </div>
+            </div>
+            <div class="three">
+                <p class="classify-title">3.居中展示（盒子内，不拉伸）</p>
+                <p>Normal</p>
+                <img class="classify-img" src="./yy.jpg" alt="">
+                <p>Dispose</p>
+                <div class="all-center">
+                    <img class="all-center-img" src="./yy.jpg" style="width: 100%" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./jquery-3.3.1.js"></script>
+    <script src="./compress.js"></script>
+    <script src="./rotate.js"></script>
+</body>
+
+</html>
