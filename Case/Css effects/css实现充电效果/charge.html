@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS实现充电效果</title>
+    <link rel="stylesheet" href="./public.css">
+    <link rel="stylesheet" href="./ordinary.css">
+    <link rel="stylesheet" href="./wave.css">
+    <link rel="stylesheet" href="./android.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 普通的 -->
+        <h3>Ordinary</h3>
+        <div class="phone-common">
+            <div class="battery battery-ord"></div>
+        </div>
+    </div>
+    <div class="wrap">
+        <!-- 波浪形 -->
+        <h3>Wave</h3>
+        <div class="phone-common">
+            <div class="container">
+                <div class="header"></div>
+                <div class="battery-wave">
+                </div>
+                <div class="battery-copy">
+                    <div class="g-wave"></div>
+                    <div class="g-wave"></div>
+                    <div class="g-wave"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <!-- 安卓 -->
+        <h3>Android</h3>
+        <div class="phone-common">
+            <div class="g-container">
+                <div class="g-number">98.7%</div>
+                <div class="g-contrast">
+                    <div class="g-circle"></div>
+                    <ul class="g-bubbles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    let ele = document.getElementsByClassName('g-number')[0],
+        electric_quantity = 0,
+        increment = 0,
+        timer = setInterval(() => {
+            increment = parseFloat(Math.random().toFixed(1));
+            electric_quantity += increment;
+            console.log(electric_quantity)
+            ele.innerHTML = electric_quantity.toFixed(1) + '%';
+        }, 1000);
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原声js实现扫雷游戏</title>
+
+    <link rel="stylesheet" href="./mine.css">
+</head>
+
+<body>
+    <div id="game-area">
+        <button id="start">开始游戏</button>
+        <p id="surplus-mine">
+            一 共 有 <span id="surM-num"></span> 个 雷 ...
+        </p>
+        <div id="game-box"></div>
+        <div id="alertBox">
+            <div id="gameover-show">
+                <span id="over-showT">失败</span>
+                <button id="replay">再来一次</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="mine.js"></script>
+    <script>
+        window.onload = function () {
+            var startBTN = document.getElementById("start")
+            startBTN.onclick = function () {
+                var mine = new Mine();
+                mine.Init();
+            }
+        }
+    </script>
+</body>
+
+</html>

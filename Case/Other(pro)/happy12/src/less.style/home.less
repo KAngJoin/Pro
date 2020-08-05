@@ -1,0 +1,71 @@
+@import url('./theme.less');
+
+#homeFullScreen {
+  width : 100%;
+  height: auto;
+
+  #main-content-box {
+    width: auto;
+
+    .head-nav-about {
+      width     : 100%;
+      height    : auto;
+      padding   : 0 160px;
+      background: #50596d;
+      position  : relative;
+      left      : 0;
+      top       : 0;
+      z-index   : 1000;
+
+      .tool-menu-bar {
+        width      : 160px;
+        height     : 60px;
+        line-height: 60px;
+        font-size  : 28px;
+        text-align : center;
+        color      : #fff;
+        cursor     : pointer;
+        position   : absolute;
+        left       : 0;
+        top        : 0;
+      }
+
+      .tool-skin-bar {
+        width          : 160px;
+        height         : 60px;
+        line-height    : 60px;
+        display        : flex;
+        align-items    : center;
+        justify-content: space-around;
+        position       : absolute;
+        right          : 0;
+        top            : 0;
+      }
+    }
+
+    .fixedTop {
+      position : fixed;
+      left     : 0;
+      animation: fixation 1.2s;
+    }
+
+    .toggle-components {
+      width     : 100%;
+      min-height: 360px;
+      // padding   : 40px;
+      box-sizing: border-box;
+    }
+  }
+}
+
+
+
+@keyframes fixation {
+  0% {
+    top: -60px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}

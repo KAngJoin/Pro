@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    position: relative;
+}
+
+#clock_Canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+    border-radius: 190px;
+    background-color: #7e7e7e
+}

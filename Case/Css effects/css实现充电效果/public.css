@@ -1,0 +1,75 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+.wrap {
+    width     : 800px;
+    margin    : 50px auto;
+    padding   : 20px 0;
+    box-shadow: 0 0 5px 3px #ddd;
+    box-sizing: border-box;
+}
+
+h3 {
+    text-align         : center;
+    margin-bottom      : 10px;
+    color              : red;
+    -webkit-user-select: none;
+    -moz-user-select   : none;
+    -webkit-user-select: none;
+    -o-user-select     : none;
+    user-select        : none;
+}
+
+.phone-common {
+    width          : 300px;
+    height         : 500px;
+    margin         : 0 auto;
+    background     : #ddd;
+    border-radius  : 20px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    position       : relative;
+}
+
+.phone-common::after {
+    content      : "";
+    display      : block;
+    width        : 30px;
+    height       : 5px;
+    border-radius: 2px;
+    position     : absolute;
+    top          : 5px;
+    left         : 50%;
+    transform    : translateX(-50%);
+    background   : #fff;
+}
+
+.phone-common::before {
+    content      : "";
+    display      : block;
+    width        : 60px;
+    height       : 24px;
+    border-radius: 12px;
+    position     : absolute;
+    bottom       : 5px;
+    left         : 50%;
+    transform    : translateX(-50%);
+    background   : #fff;
+    opacity      : 0.6;
+}
+
+.battery {
+    width        : 260px;
+    height       : 400px;
+    background   : #fff;
+    border-radius: 16px;
+    position     : relative;
+}

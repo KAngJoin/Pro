@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>四列布局</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            margin-right: -10px;
+        }
+
+        .row {
+            box-sizing: border-box;
+            padding-right: 10px;
+            width: 25%;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            float: left;
+            color: #fff;
+            background: #000;
+            background-clip: content-box;
+        }
+
+        .container::before {
+            display: table;
+            content: '';
+        }
+
+        .container::after {
+            display: table;
+            content: '';
+            clear: both;
+        }
+
+        #flex1 {
+            width: 100%;
+            margin-top: 50px;
+            padding: 0;
+            display: flex;
+        }
+
+        .item {
+            flex: 1;
+            text-align: center;
+            line-height: 100%;
+            background:#dee;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">第一列</div>
+        <div class="row">第二列</div>
+        <div class="row">第三列</div>
+        <div class="row">第四列</div>
+    </div>
+
+    <div id="flex1">
+        <div class="item">flex 1</div>
+        <div class="item">flex 2</div>
+        <div class="item">flex 3</div>
+        <div class="item">flex 4</div>
+    </div>
+</body>
+
+</html>

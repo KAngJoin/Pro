@@ -1,0 +1,58 @@
+@import url('./theme.less');
+
+* {
+    margin : 0;
+    padding: 0;
+}
+
+html,
+body {
+    //    background: linear-gradient(to bottom right, #fff,rgb(255, 245, 234) , #fff);
+}
+
+#app {
+    width                  : 100%;
+    overflow               : hidden;
+    font-family            : "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing : antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    #addRecord {
+        position: fixed;
+        right   : 100px;
+        bottom  : 120px;
+        z-index: 10000;
+
+        .ivu-badge-status-dot {
+            width      : 40px;
+            height     : 40px;
+            text-align : center;
+            line-height: 40px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:before {
+                content  : "+";
+                color    : #fff;
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+.ivu-modal-header-inner {
+    font-size     : 20px;
+    font-family   : 'YouYuan';
+    letter-spacing: 0.5em;
+    text-align    : center;
+}
+
+.ivu-badge-status-processing {
+    background: @mainColor
+}
+
+.ivu-badge-status-processing:after {
+    border-color: @mainColor
+}

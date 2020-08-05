@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+        .box {
+            width: 140px;
+            height: 140px;
+            background: rgba(141, 153, 138, 0.97);
+            background-image: linear-gradient(to right, transparent 50%, currentColor 0);
+            color: #19ff13;
+            border-radius: 50%;
+        }
+
+        .box::before {
+            content: '';
+            display: block;
+            height: 100%;
+            margin-left: 50%;
+            border-radius: 0 100% 100% 0/50%;
+            background-color: inherit;
+            transform-style: preserve-3d;
+            transform-origin: left;
+            animation: spin 6s linear infinite, bg 12s step-end infinite;
+        }
+
+        /*.box::after {*/
+            /*content: '';*/
+            /*display: block;*/
+            /*height: 100%;*/
+            /*border-radius: 100%;*/
+            /*background-color: white;*/
+            /*transform-style: preserve-3d;*/
+            /*transform-origin: center;*/
+            /*transform: scale(0.95) rotateY(30deg);*/
+            /*position: relative;*/
+            /*left: 0;*/
+            /*top: -100%;*/
+            /*z-index: 99;*/
+        /*}*/
+
+        @keyframes spin {
+            to {
+                transform: rotate(.5turn);//【1】
+            }
+        }
+
+        @keyframes bg {
+            50% {
+                background: currentColor;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+
+<script>
+
+</script>
+</body>
+</html>

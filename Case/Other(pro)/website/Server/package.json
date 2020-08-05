@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node-dev ./app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "formidable": "^1.2.1",
+    "fs": "0.0.1-security",
+    "imageinfo": "^1.0.4",
+    "mysql": "^2.16.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}
